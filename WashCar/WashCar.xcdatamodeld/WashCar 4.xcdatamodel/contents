@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CarBeautyData" syncable="YES">
+        <attribute name="discountPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="originalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="beautyCpy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyInfo" inverseName="beautydata" inverseEntity="CompanyInfo" syncable="YES"/>
+    </entity>
+    <entity name="CarTypeData" representedClassName="CarTypeData" syncable="YES">
+        <attribute name="discountPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="originalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CompanyInfo" inverseName="typeData" inverseEntity="CompanyInfo" syncable="YES"/>
+    </entity>
+    <entity name="CompanyInfo" representedClassName="CompanyInfo" syncable="YES">
+        <attribute name="armor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="armor_OriginalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="armor_PromotionPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="attitudeStar" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="car_OriginalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="car_PromotionPrice" optional="YES" attributeType="Float" defaultValueString="0" syncable="YES"/>
+        <attribute name="carType_Car" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="carType_LargeSUV" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="carType_SmallSUV" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="coating" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coating_OriginalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="coating_PromotionPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="cpyAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cpyName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cpyPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="environmentStar" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="evaluationStar" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="glazing" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="glazing_OriginalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="glazing_PromotionPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="km" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="largeSUV_OriginalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="largeSUV_PromotionPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="salesVolume" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="smallSUV_OriginalPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="smallSUV_PromotionPrice" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="technologyStar" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="telePhone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userEvaluation" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="beautydata" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CarBeautyData" inverseName="beautyCpy" inverseEntity="CarBeautyData" syncable="YES"/>
+        <relationship name="typeData" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="CarTypeData" inverseName="info" inverseEntity="CarTypeData" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CarBeautyData" positionX="-45" positionY="144" width="128" height="105"/>
+        <element name="CarTypeData" positionX="-63" positionY="135" width="128" height="105"/>
+        <element name="CompanyInfo" positionX="-63" positionY="-18" width="128" height="540"/>
+    </elements>
+</model>
