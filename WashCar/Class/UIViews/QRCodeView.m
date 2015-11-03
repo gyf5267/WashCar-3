@@ -48,7 +48,9 @@
 
     
     UIImageView* imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, ScreenWidth-10, ScreenWidth)];
+    
     imageView.image = [self qrCodeWithData:@"123456"];
+    
     [image_bg addSubview:imageView];
 }
 

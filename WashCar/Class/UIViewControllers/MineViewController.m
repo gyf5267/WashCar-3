@@ -40,7 +40,13 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getQQHeadIcon) name:QQ_GetInfo_Notification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updataUI:) name:Remove_Cache_Directory_Size_Notification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dataClicked:) name:Add_Notification object:nil];
     
+}
+
+
+-(void)dataClicked:(id)sender{
+    NSLog(@"MineViewController");
 }
 
 -(void)updataUI:(id)sender{

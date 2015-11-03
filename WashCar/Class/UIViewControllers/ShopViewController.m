@@ -10,6 +10,8 @@
 #import "UIColorDef.h"
 #import "WCBaseViewController+Navigation.h"
 #import "EngineInterface.h"
+#import "WCNotification.h"
+
 
 @interface ShopViewController ()
 
@@ -33,6 +35,8 @@
     
     [self initDataSource];
 }
+
+
 
 -(void)initDataSource{
     [[EngineInterface  shareInstance] fetchGoodsInfo];

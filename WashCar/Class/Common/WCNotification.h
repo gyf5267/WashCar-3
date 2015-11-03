@@ -20,4 +20,6 @@
 #define Add_Cpy_Info_Notification @"Add_Cpy_Info_Notification"
 #define Add_Goods_Info_Notification @"Add_Goods_Info_Notification"
 
+#define Add_Notification @"Add_Notification"
+
 #endif

@@ -37,5 +37,8 @@
 //测试接口
 -(void)addTestData;
 
+//通知接口
+-(void)add_Notifaction;
+
 
 @end

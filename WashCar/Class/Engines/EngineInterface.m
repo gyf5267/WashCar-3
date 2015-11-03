@@ -699,9 +699,10 @@ static EngineInterface* instance = nil;
     return NO;
 }
 
-
-
-
+//通知接口
+-(void)add_Notifaction{
+    [[NSNotificationCenter defaultCenter] postNotificationName:Add_Notification object:nil];
+}
 
 
 

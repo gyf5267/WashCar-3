@@ -59,8 +59,14 @@
     [NSThread sleepForTimeInterval:2.0f];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addSucceed:) name:Add_Cpy_Info_Notification object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addData:) name:Add_Notification object:nil];
+    
     [self initTabView];
     // Do any additional setup after loading the view.
+}
+
+-(void)addData:(id)sender{
+    NSLog(@"WashViewController");
 }
 
 -(void)addSucceed:(id)sender{
@@ -459,6 +465,8 @@
 
 #pragma mark -UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [[EngineInterface shareInstance] add_Notifaction];
     
     WashCarDetailViewController* detailView = [[WashCarDetailViewController alloc] init];
     
